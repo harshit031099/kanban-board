@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="kanban-container">
+    <header>
+      <h2>Kanban Board</h2>
+      <input type="text" id="search" placeholder="Search tasks...">
+      <button id="add-task-btn">+ Add Task</button>
+    </header>
+
+    <div class="kanban-board" id="kanban-board">
+     
+    </div>
+  </div>
+
+ 
+  <div id="task-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3 id="modal-title">Add Task</h3>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Title" required>
+        <select id="task-type">
+          <option>FEATURE</option>
+          <option>BUG</option>
+          <option>TASK</option>
+        </select>
+        <input type="number" id="task-estimation" placeholder="Effort Estimation">
+        <select id="task-priority">
+          <option>P0</option>
+          <option>P1</option>
+          <option>P2</option>
+        </select>
+        <textarea id="task-desc" placeholder="Description"></textarea>
+        <input type="text" id="task-assignee" placeholder="Assignee">
+        <input type="text" id="task-tags" placeholder="Tags (comma separated)">
+        <button type="submit">Save Task</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="kanban.js"></script>
+</body>
+</html>
